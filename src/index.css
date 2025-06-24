@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.swiper-button-next,
+.swiper-button-prev,
+.quiz-nav-button {
+  color: #8be8ed !important;
+  transition: transform 0.1s ease-in-out;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active,
+.quiz-nav-button:active {
+  transform: scale(1.2);
+}
+
+.swiper-button-disabled {
+  display: none !important;
+}
+
+.font-host {
+  font-family: "Host Grotesk" , sans-serif;
+}
+
+.font-oddval {
+  font-family: "Oddval" , sans-serif;
+}
