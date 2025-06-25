@@ -6,6 +6,7 @@ const questions = [
   {
     question: "Hore! Kamu telah berhasil menjadi mahasiswa TPB FSRD ITB 2025~ Hari pertama masuk kelas, suasana masih canggung banget... Hal pertama yang kamu lakukan?",
     image: "/gif/satu.gif",
+    imgClass: "w-[55vw] max-w-[300px] md:w-[160px]",
     options: [
       { text: "Buka sketchbook dan doodling sambil menunggu orang lain menyapamu", type: "Artisan", score: 4 },
       { text: "Tersenyum dan menyapa teman baru di sampingmu", type: "Guardian", score: 3 },
@@ -16,7 +17,7 @@ const questions = [
   {
     question: "Kamu memasuki kelas... dosen memaparkan materi dan tanpa basa-basi langsung memberi tugas kelompok pertama, topiknya bebas! Gaya kamu di awal brainstorming seperti apa?",
     image: "/gif/dua.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[65vw] max-w-[300px] md:w-[220px]",
     options: [
       { text: "Biar nggak awkward, kenalan bareng dulu aja, sambil diskusi santai", type: "Guardian", score: 2 },
       { text: "Keluarin sketchbook atau iPad, spontan coret-coret ide visual dan tunjukkin ke kelompok", type: "Artisan", score: 3 },
@@ -27,7 +28,7 @@ const questions = [
   {
     question: "Setelah berdiskusi dengan kelompok, kalian melakukan asistensi kepada dosen terhadap ide yang kalian kembangkan. Namun, tiba-tiba, dosen memberi revisi besar-besaran. Apa respon pertamamu?",
     image: "/gif/tiga.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[200px]",
     options: [
       { text: "Menganalisis feedback dan membuat catatan revisi", type: "Rationalist", score: 3 },
       { text: "Evaluasi bareng teman, saling menguatkan, dan brainstorming solusi", type: "Guardian", score: 4 },
@@ -38,7 +39,7 @@ const questions = [
   {
     question: "Disaat kelompok lain sudah selesai, kelompokmu justru \"mentok\". Bagaimana cara kamu menghadapinya?",
     image: "/gif/empat.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[220px]",
     options: [
       { text: "Membuka sesi brainstorming bebas, siapa pun boleh kasih ide \"gila\"", type: "Artisan", score: 2 },
       { text: "Mengatur ulang pembagian tugas dan cek progres satu-satu", type: "Rationalist", score: 4 },
@@ -49,6 +50,7 @@ const questions = [
   {
     question: "SUDAH TIBA SAATNYA KELOMPOKMU AKAN MELAKUKAN PRESENTASI DI DEPAN KELAS!! Apa peranmu biasanya dalam kelompok?",
     image: "/gif/lima.gif",
+    imgClass: "w-[45vw] max-w-[300px] md:w-[160px]",
     options: [
       { text: "Bikin visual presentasi sekreatif dan seunik mungkin", type: "Artisan", score: 1 },
       { text: "Membuat script & membagi giliran presentasi", type: "Rationalist", score: 2 },
@@ -59,7 +61,7 @@ const questions = [
   {
     question: "Saat kamu melihat ke sebelahmu, ada satu temanmu gugup berat. Apa yang kamu lakukan?",
     image: "/gif/enam.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[65vw] max-w-[300px] md:w-[250px]",
     options: [
       { text: "Menawari diri untuk menemani dan siap jadi backup kalau ia tiba-tiba blank.", type: "Guardian", score: 3 },
       { text: "Menyusun ulang flow presentasi agar dia mendapat giliran setelah melihat contoh dari yang lain dulu, biar lebih siap secara teknis.", type: "Rationalist", score: 4 },
@@ -70,7 +72,7 @@ const questions = [
   {
     question: "\"Aduh! presentasi kita kurang maksimal nih! Makanya dosen kasih kita feedback banyak banget\" ucap salah satu temanmu dengan nada sebal dan kelompok saling menyalahkan satu dengan yang lain, mengakibatkan konflik kecil. Apa yang kamu lakukan?",
     image: "/gif/tujuh.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[65vw] max-w-[300px] md:w-[270px]",
     options: [
       { text: "Mengusulkan sesi sharing dan refleksi bareng-bareng", type: "Idealist", score: 4 },
       { text: "Mempertemukan semua pihak, cari solusi bareng", type: "Guardian", score: 2 },
@@ -81,6 +83,7 @@ const questions = [
   {
     question: "Phew... akhirnya, setelah kelas yang melelahkan, tiba waktu istirahat makan siang. Biasanya kamu?",
     image: "/gif/delapan.gif",
+    imgClass: "w-[45vw] max-w-[300px] md:w-[150px]",
     options: [
       { text: "Eksplor spot unik sekitar kampus untuk mencari inspirasi sketching", type: "Artisan", score: 2 },
       { text: "Nongkrong rame-rame bareng kelompok sambil cerita-cerita", type: "Guardian", score: 4 },
@@ -91,6 +94,7 @@ const questions = [
   {
     question: "\"Sudah jam berapa ini? OH GAWAT , SUDAH PUKUL 1 SIANG!\" jam istirahat berjalan begitu saja dan bentar lagi mulai memasuki mata kuliah selanjutnya, tapi... kamu belum makan apa-apa. Makanan apa yang akan kamu pilih?",
     image: "/gif/sembilan.gif",
+    imgClass: "w-[45vw] max-w-[300px] md:w-[150px]",
     options: [
       { text: "Snack bar karena praktis, bisa dimakan sambil jalan ke kelas", type: "Rationalist", score: 1 },
       { text: "Beli gorengan satu kresek, sekalian buat dibagi ke teman-teman yang lain", type: "Guardian", score: 3 },
@@ -101,7 +105,7 @@ const questions = [
   {
     question: "Untungnya, kamu memasuki kelas tepat waktu. Namun.... hoam... kelas terasa membosankan, kira-kira ngapain ya?",
     image: "/gif/sepuluh.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[65vw] max-w-[300px] md:w-[250px]",
     options: [
       { text: "Rancang catatan ringkas untuk mengalihkan bosannya dengan cara yang bermanfaat", type: "Rationalist", score: 2 },
       { text: "Melakukan sketsa iseng di catatan", type: "Artisan", score: 4 },
@@ -112,6 +116,7 @@ const questions = [
   {
     question: "Di tengah-tengah kelas, kamu kepikiran akan tugasmu yang mulai numpuk dan harus mulai nyicil. Kira-kira tempat ideal seperti apa yang akan kamu pilih untuk mengerjakan tugasmu setelah kelas?",
     image: "/gif/sebelas.gif",
+    imgClass: "w-[50vw] max-w-[300px] md:w-[160px]",
     options: [
       { text: "Nongkrong sambil mengerjakan tugas bareng teman di basecamp", type: "Guardian", score: 3 },
       { text: "Tempat yang tenang dan teratur, seperti kamarku!", type: "Rationalist", score: 4 },
@@ -122,6 +127,7 @@ const questions = [
   {
     question: "Tentunya, kamu merasa jenuh dan overwhelmed karena tugas yang terus masuk tanpa henti. Bagaimana kamu mengatasinya?",
     image: "/gif/duabelas.gif",
+    imgClass: "w-[55vw] max-w-[300px] md:w-[160px]",
     options: [
       { text: "Mengubah suasana workspace dan mencoba teknik mengerjakan yang baru supaya lebih enjoy", type: "Artisan", score: 4 },
       { text: "Menyusun to-do-list dan susun prioritas agar tujuan jelas", type: "Rationalist", score: 2 },
@@ -132,7 +138,7 @@ const questions = [
   {
     question: "Kamu diajak oleh temanmu mengikuti lomba desain secara mendadak, apa yang kamu lakukan?",
     image: "/gif/tigabelas.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[70vw] max-w-[300px] md:w-[230px]",
     options: [
       { text: "Langsung daftar, tantangan baru = peluang eksplorasi!", type: "Artisan", score: 4 },
       { text: "Cek jadwal untuk menyesuaikan dengan tugas dan kelompok", type: "Rationalist", score: 2 },
@@ -143,6 +149,7 @@ const questions = [
   {
     question: "Di luar tugas dan keperluan kuliah, kamu sering…",
     image: "/gif/empatbelas.gif",
+    imgClass: "w-[50vw] max-w-[300px] md:w-[160px]",
     options: [
       { text: "Membuat personal project di rumah", type: "Artisan", score: 2 },
       { text: "Mengajak teman jalan-jalan", type: "Guardian", score: 4 },
@@ -153,6 +160,7 @@ const questions = [
   {
     question: "Menjelang akhir semester, nilai apa yang paling kamu syukuri?",
     image: "/gif/limabelas.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[190px]",
     options: [
       { text: "Kreativitas tanpa batas", type: "Artisan", score: 3 },
       { text: "Kompak dan saling dukung", type: "Guardian", score: 2 },
@@ -163,6 +171,7 @@ const questions = [
   {
     question: "Akhirnya, setelah melewati semester satu yang cukup hectic, libur semester dimulai~ Agenda pertama yang kamu rencanakan adalah…",
     image: "/gif/enambelas.gif",
+    imgClass: "w-[65vw] max-w-[300px] md:w-[220px]",
     options: [
       { text: "Bereksplorasi bikin project seni personal dan mengembangkan skill", type: "Artisan", score: 1 },
       { text: "Menulis refleksi tentang perjalanan satu semester", type: "Idealist", score: 4 },
@@ -173,7 +182,7 @@ const questions = [
   {
     question: "Jika harus merefleksikan satu semester yang kamu lewati, satu hal yang paling mungkin kamu pelajari sebagai mahasiswa baru TPB FSRD?",
     image: "/gif/tujuhbelas.gif",
-    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
+    imgClass: "w-[80vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Pentingnya menjaga hubungan baik dengan semua orang", type: "Guardian", score: 2 },
       { text: "Selalu berani keluar dari zona nyaman, mencoba hal baru, dan mengekspresikan id-ide unikmu", type: "Artisan", score: 3 },
@@ -246,11 +255,11 @@ const QuizPage = () => {
 
       {/* Gambar GIF */}
       {questions[current].image && (
-        <div className="flex justify-center items-center" style={{height: '20vh'}}>
+        <div className="flex justify-center items-center mt-8 md:mt-8" style={{height: '20vh'}}>
           <img
             src={questions[current].image}
             alt="Question Illustration"
-            className={`${questions[current].imgClass || "w-[45vw] max-w-[220px] md:w-[220px] md:max-w-[220px]"} h-auto mx-auto"`}
+            className={`${questions[current].imgClass || "w-[45vw] max-w-[220px] md:w-[180px] md:max-w-[180px]"} h-auto mx-auto`}
           />
         </div>
       )}
@@ -263,8 +272,8 @@ const QuizPage = () => {
             text={opt.text}
             onClick={() => handleAnswer(opt.type, opt.score)}
             variant="quiz"
-            className={answers[current]?.type === opt.type ? "ring-2 ring-white" : ""}
-            style={{ minHeight: '8vh', fontSize: '1rem' }}
+            className="w-full md:w-[50vw] mx-auto h-[8vh] md:h-[10vh]"
+            style={{ minHeight: '7vh', fontSize: '1rem' }}
           />
         ))}
       </div>

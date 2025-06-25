@@ -202,7 +202,7 @@ export default function ResultPage() {
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           {/* ==== Konten Utama ==== */}
-          <div className="relative z-10 flex flex-col items-center justify-center w-full mt-4 mb-4">
+          <div className="relative z-10 flex flex-col items-center justify-center w-full mt-4 mb-1">
             <img
               src={src}
               alt={`${winner} – ${name}`}
@@ -211,7 +211,7 @@ export default function ResultPage() {
           </div>
     
           {/* ==== Tombol di Bawah ==== */}
-          <div className="relative z-10 flex justify-center w-full mt-6 mb-4">
+          <div className="relative z-10 flex justify-center w-full mt-5 mb-4">
             <Button
               onClick={() => navigate('/NirmanaPage', { state: { winner, name } })}
               text="Lihat RD2D"
