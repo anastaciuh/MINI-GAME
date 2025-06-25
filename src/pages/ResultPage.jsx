@@ -198,20 +198,20 @@ export default function ResultPage() {
 
     return (
         <div
-          className="flex flex-col h-screen p-6 bg-cover bg-center overflow-hidden"
+          className="min-h-screen flex flex-col p-6 bg-cover bg-center"
           style={{ backgroundImage: `url(${bgImage})` }}
         >
           {/* ==== Konten Utama ==== */}
-          <div className="relative z-10 flex-1 flex flex-col items-center justify-center w-full">
+          <div className="relative z-10 flex flex-col items-center justify-center w-full mt-4 mb-4">
             <img
               src={src}
               alt={`${winner} – ${name}`}
-              className="w-full max-w-md md:max-w-lg lg:max-w-md mx-auto mb-10 md:-mt-30"
+              className="w-full max-w-md md:max-w-lg lg:max-w-md mx-auto"
             />
           </div>
     
           {/* ==== Tombol di Bawah ==== */}
-          <div className="relative z-10 flex justify-center w-full md:-mt-20">
+          <div className="relative z-10 flex justify-center w-full mt-6 mb-4">
             <Button
               onClick={() => navigate('/NirmanaPage', { state: { winner, name } })}
               text="Lihat RD2D"

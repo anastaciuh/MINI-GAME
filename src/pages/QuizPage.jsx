@@ -16,6 +16,7 @@ const questions = [
   {
     question: "Kamu memasuki kelas... dosen memaparkan materi dan tanpa basa-basi langsung memberi tugas kelompok pertama, topiknya bebas! Gaya kamu di awal brainstorming seperti apa?",
     image: "/gif/dua.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Biar nggak awkward, kenalan bareng dulu aja, sambil diskusi santai", type: "Guardian", score: 2 },
       { text: "Keluarin sketchbook atau iPad, spontan coret-coret ide visual dan tunjukkin ke kelompok", type: "Artisan", score: 3 },
@@ -26,6 +27,7 @@ const questions = [
   {
     question: "Setelah berdiskusi dengan kelompok, kalian melakukan asistensi kepada dosen terhadap ide yang kalian kembangkan. Namun, tiba-tiba, dosen memberi revisi besar-besaran. Apa respon pertamamu?",
     image: "/gif/tiga.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Menganalisis feedback dan membuat catatan revisi", type: "Rationalist", score: 3 },
       { text: "Evaluasi bareng teman, saling menguatkan, dan brainstorming solusi", type: "Guardian", score: 4 },
@@ -36,6 +38,7 @@ const questions = [
   {
     question: "Disaat kelompok lain sudah selesai, kelompokmu justru \"mentok\". Bagaimana cara kamu menghadapinya?",
     image: "/gif/empat.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Membuka sesi brainstorming bebas, siapa pun boleh kasih ide \"gila\"", type: "Artisan", score: 2 },
       { text: "Mengatur ulang pembagian tugas dan cek progres satu-satu", type: "Rationalist", score: 4 },
@@ -56,6 +59,7 @@ const questions = [
   {
     question: "Saat kamu melihat ke sebelahmu, ada satu temanmu gugup berat. Apa yang kamu lakukan?",
     image: "/gif/enam.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Menawari diri untuk menemani dan siap jadi backup kalau ia tiba-tiba blank.", type: "Guardian", score: 3 },
       { text: "Menyusun ulang flow presentasi agar dia mendapat giliran setelah melihat contoh dari yang lain dulu, biar lebih siap secara teknis.", type: "Rationalist", score: 4 },
@@ -66,6 +70,7 @@ const questions = [
   {
     question: "\"Aduh! presentasi kita kurang maksimal nih! Makanya dosen kasih kita feedback banyak banget\" ucap salah satu temanmu dengan nada sebal dan kelompok saling menyalahkan satu dengan yang lain, mengakibatkan konflik kecil. Apa yang kamu lakukan?",
     image: "/gif/tujuh.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Mengusulkan sesi sharing dan refleksi bareng-bareng", type: "Idealist", score: 4 },
       { text: "Mempertemukan semua pihak, cari solusi bareng", type: "Guardian", score: 2 },
@@ -96,6 +101,7 @@ const questions = [
   {
     question: "Untungnya, kamu memasuki kelas tepat waktu. Namun.... hoam... kelas terasa membosankan, kira-kira ngapain ya?",
     image: "/gif/sepuluh.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Rancang catatan ringkas untuk mengalihkan bosannya dengan cara yang bermanfaat", type: "Rationalist", score: 2 },
       { text: "Melakukan sketsa iseng di catatan", type: "Artisan", score: 4 },
@@ -126,6 +132,7 @@ const questions = [
   {
     question: "Kamu diajak oleh temanmu mengikuti lomba desain secara mendadak, apa yang kamu lakukan?",
     image: "/gif/tigabelas.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Langsung daftar, tantangan baru = peluang eksplorasi!", type: "Artisan", score: 4 },
       { text: "Cek jadwal untuk menyesuaikan dengan tugas dan kelompok", type: "Rationalist", score: 2 },
@@ -166,6 +173,7 @@ const questions = [
   {
     question: "Jika harus merefleksikan satu semester yang kamu lewati, satu hal yang paling mungkin kamu pelajari sebagai mahasiswa baru TPB FSRD?",
     image: "/gif/tujuhbelas.gif",
+    imgClass: "w-[60vw] max-w-[300px] md:w-[300px]",
     options: [
       { text: "Pentingnya menjaga hubungan baik dengan semua orang", type: "Guardian", score: 2 },
       { text: "Selalu berani keluar dari zona nyaman, mencoba hal baru, dan mengekspresikan id-ide unikmu", type: "Artisan", score: 3 },
@@ -214,33 +222,41 @@ const QuizPage = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center p-6 bg-cover bg-center bg-[url('/images/bgwarna.png')] md:bg-[url('/images/bgwarnadesktop.png')]"
+      className="h-screen flex flex-col bg-cover bg-center bg-[url('/images/bgwarna.png')] md:bg-[url('/images/bgwarnadesktop.png')]"
     >
-      <div className="w-full max-w-xl mx-auto mt-2 relative">
-        <div className="bg-white/50 rounded-full h-4">
-          <div
-            className="bg-[#3425ad] h-4 rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${progress}%` }}
-          ></div>
+      {/* Progress Bar */}
+      <div className="h-[4vh] flex items-center px-4 pt-2">
+        <div className="w-full max-w-xl mx-auto relative">
+          <div className="bg-white/50 rounded-full h-3">
+            <div
+              className="bg-[#3425ad] h-3 rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
         </div>
       </div>
 
-      <div className="flex items-start max-w-md mt-8 mb-4">
-        <span className="font-oddval text-[#3325bc] text-3xl font-bold mr-4">Q{current + 1}</span>
-        <p className="font-host text-[#3325bc] text-lg font-bold">
+      {/* Pertanyaan */}
+      <div className="flex items-center justify-center max-h-[16vh] min-h-[10vh] px-4">
+        <span className="font-oddval text-[#3325bc] text-2xl md:text-3xl font-bold mr-2">Q{current + 1}</span>
+        <p className="font-host text-[#3325bc] text-base md:text-lg font-bold overflow-auto">
           {questions[current].question}
         </p>
       </div>
 
+      {/* Gambar GIF */}
       {questions[current].image && (
-        <img
-          src={questions[current].image}
-          alt="Question Illustration"
-          className="w-60 h-auto mb-4"
-        />
+        <div className="flex justify-center items-center" style={{height: '20vh'}}>
+          <img
+            src={questions[current].image}
+            alt="Question Illustration"
+            className={`${questions[current].imgClass || "w-[45vw] max-w-[220px] md:w-[220px] md:max-w-[220px]"} h-auto mx-auto"`}
+          />
+        </div>
       )}
 
-      <div className="space-y-5 w-full max-w-xl mx-auto">
+      {/* Pilihan Jawaban */}
+      <div className="flex-1 flex flex-col justify-center gap-2 px-2 overflow-y-auto">
         {questions[current].options.map((opt, idx) => (
           <Button
             key={idx}
@@ -248,19 +264,20 @@ const QuizPage = () => {
             onClick={() => handleAnswer(opt.type, opt.score)}
             variant="quiz"
             className={answers[current]?.type === opt.type ? "ring-2 ring-white" : ""}
+            style={{ minHeight: '8vh', fontSize: '1rem' }}
           />
         ))}
       </div>
 
-      <div className="flex justify-between w-full max-w-xl mx-auto mt-auto pt-10">
+      {/* Navigasi */}
+      <div className="h-[7vh] flex items-center justify-between w-full max-w-xl mx-auto px-4 pb-2">
         <button onClick={handleBack} disabled={current === 0} className="quiz-nav-button disabled:opacity-50">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-10 h-10">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </button>
-
         <button onClick={handleNext} disabled={isNavigating || current >= answeredQuestions} className="quiz-nav-button disabled:opacity-50">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-10 h-10">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </button>

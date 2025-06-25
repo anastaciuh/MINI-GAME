@@ -24,3 +24,30 @@
 .font-oddval {
   font-family: "Oddval" , sans-serif;
 }
+
+
+.about-carousel .swiper-button-next,
+.about-carousel .swiper-button-prev {
+  font-size: 0.3rem !important;
+  width: 0.3rem !important;
+  height: 0.3rem !important;
+  margin: 0 2.0rem !important;
+}
+@media (min-width: 600px) {
+  .about-carousel .swiper-button-next,
+  .about-carousel .swiper-button-prev {
+    font-size: 0.7rem !important;
+    width: 0.9rem !important;
+    height: 0.9rem !important;
+    margin: 0 2.0rem !important;
+  }
+}
+
+.about-carousel .swiper-button-next {
+  right: 0 !important;
+  transform: translateX(120%);
+}
+.about-carousel .swiper-button-prev {
+  left: 0 !important;
+  transform: translateX(-120%);
+}

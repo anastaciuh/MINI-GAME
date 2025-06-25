@@ -3,7 +3,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation'; 
 
-const CharacterCarousel = () => {
+const CharacterCarousel = ({ className = "" }) => {
   const characters = [
     { name: "Si Guardian", image: "/images/guardian.png", desc: "Penjaga Harmoni" },
     { name: "Si Artisan", image: "/images/artisan.png", desc: "Penuh kreativitas" },
@@ -12,27 +12,26 @@ const CharacterCarousel = () => {
   ];
 
   return (
-  <Swiper
-    modules={[Navigation]} 
-  navigation 
-    spaceBetween={30}
-    slidesPerView={1}
-    loop={false}
-    className="w-full"
-  >
-    {characters.map((char, idx) => (
-      <SwiperSlide key={idx}>
-      <div className="flex flex-col items-center text-center space-y-1 mt-1 pt-2 px-2">
-        <img src={char.image} alt={char.name} className="w-full h-auto max-h-[150px] md:max-h-[250px] object-contain mx-auto" />
-        <h2 className="font-host text-base font-bold text-[#8be8ed]">{char.name}</h2>
-        <p className="font-host text-sm max-w-[85%] leading-snug text-[#8be8ed]">
-          {char.desc}
-        </p>
-      </div>
-    </SwiperSlide>
-    ))}
-  </Swiper>
-  
+    <Swiper
+      modules={[Navigation]}
+      navigation
+      spaceBetween={15}
+      slidesPerView={1}
+      loop={false}
+      className={`w-full ${className}`}
+    >
+      {characters.map((char, idx) => (
+        <SwiperSlide key={idx}>
+          <div className="flex flex-col items-center text-center space-y-1 mt-1 pt-2 px-2">
+            <img src={char.image} alt={char.name} className="w-full h-auto max-h-[40vw] md:max-h-[9vw] object-contain mx-auto" />
+            <h2 className="font-host text-xs md:text-xs font-bold text-[#8be8ed]">{char.name}</h2>
+            <p className="font-host text-[10px] md:text-xs max-w-[85%] leading-snug text-[#8be8ed]">
+              {char.desc}
+            </p>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 

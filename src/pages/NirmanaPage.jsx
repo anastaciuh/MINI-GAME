@@ -120,7 +120,7 @@ const NirmanaPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ type: 'tween', ease: 'easeOut', duration: 1.6 }}
             />
-            <div className="flex justify-between mt-5 md:mt-5 px-4 md:px-8 w-full max-w-md mx-auto">
+            <div className="flex justify-between mb:mb-10 md: mt-5 md:mt-5 px-4 md:px-8 w-full max-w-md mx-auto">
                 <Button text="Back" onClick={() => navigate(-1)} variant="secondary" />
                 <Button text="Cari RD2D" onClick={() => navigate('/TeknisPengunggahan')} />
             </div>
