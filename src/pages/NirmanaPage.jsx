@@ -107,7 +107,7 @@ const NirmanaPage = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-start bg-[url('/images/bgwarna.png')] md:bg-[url('/images/bgwarnadesktop.png')] bg-cover bg-center overflow-hidden">
+        <div className="min-h-screen flex flex-col items-center justify-start bg-[url('/images/bgrealmobile.png')] md:bg-[url('/images/bgrealdesktop.png')] bg-cover bg-center overflow-hidden">
             <div className="bg-white/30 backdrop-blur-sm rounded-sm p-8 mt-4 ml-4 mr-4 mb-8 text-center max-w-md mx-4 space-y-7 lex flex-col items-center">
                 <h1 className="font-oddval text-3xl font-bold text-[#3325bc] mt-2">{data.nirmanaType}</h1>               
                  <p className="font-host text-[#3325bc] drop-shadow-2xl font-semibold text-xs leading-relaxed px-2 md:px-8 flex-justify-text text-justify">{data.nirmanaPrimer}</p>

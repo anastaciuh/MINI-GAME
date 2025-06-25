@@ -8,10 +8,10 @@ const questions = [
     image: "/gif/satu.gif",
     imgClass: "w-[55vw] max-w-[300px] md:w-[160px]",
     options: [
-      { text: "Buka sketchbook dan doodling sambil menunggu orang lain menyapamu", type: "Artisan", score: 4 },
+      { text: "Buka sketchbook dan doodling sambil \nmenunggu orang lain menyapamu", type: "Artisan", score: 4 },
       { text: "Tersenyum dan menyapa teman baru di sampingmu", type: "Guardian", score: 3 },
       { text: "Mengamati suasana dan mengenali pola interaksi teman baru", type: "Rationalist", score: 2 },
-      { text: "Merenung tentang pencapaianmu menjadi \"maba\" di kampus impian", type: "Idealist", score: 1 },
+      { text: "Merenung tentang pencapaian menjadi \"maba\" di kampus impian", type: "Idealist", score: 1 },
     ],
   },
   {
@@ -20,9 +20,9 @@ const questions = [
     imgClass: "w-[65vw] max-w-[300px] md:w-[220px]",
     options: [
       { text: "Biar nggak awkward, kenalan bareng dulu aja, sambil diskusi santai", type: "Guardian", score: 2 },
-      { text: "Keluarin sketchbook atau iPad, spontan coret-coret ide visual dan tunjukkin ke kelompok", type: "Artisan", score: 3 },
-      { text: "Ajak kelompok mikir gimana ide kita bisa memberi dampak kecil yang berarti", type: "Idealist", score: 4 },
-      { text: "Merancang timeline, pembagian tugas, dan rundown step-by-step biar semua jelas", type: "Rationalist", score: 1 },
+      { text: "Keluarin sketchbook atau iPad, spontan coret-coret \nide visual dan tunjukkin ke kelompok", type: "Artisan", score: 3 },
+      { text: "Ajak kelompok mikir gimana ide kita bisa \nmemberi dampak kecil yang berarti", type: "Idealist", score: 4 },
+      { text: "Merancang timeline, pembagian tugas, dan \nrundown step-by-step biar semua jelas", type: "Rationalist", score: 1 },
     ],
   },
   {
@@ -55,7 +55,7 @@ const questions = [
       { text: "Bikin visual presentasi sekreatif dan seunik mungkin", type: "Artisan", score: 1 },
       { text: "Membuat script & membagi giliran presentasi", type: "Rationalist", score: 2 },
       { text: "Menyemangati teman yang gugup", type: "Guardian", score: 3 },
-      { text: "Membuka presentasi dengan cerita pengalaman pribadi yang relate ke tema, biar audiens merasakan makna dan relevansi karya kita", type: "Idealist", score: 4 },
+      { text: "Membuka presentasi dengan cerita pribadi yang \nrelate ke tema, biar audiens merasakan makna dan relevansi karya kita", type: "Idealist", score: 4 },
     ],
   },
   {
@@ -63,10 +63,10 @@ const questions = [
     image: "/gif/enam.gif",
     imgClass: "w-[65vw] max-w-[300px] md:w-[250px]",
     options: [
-      { text: "Menawari diri untuk menemani dan siap jadi backup kalau ia tiba-tiba blank.", type: "Guardian", score: 3 },
+      { text: "Menawari diri untuk menemani dan siap jadi \nbackup kalau ia tiba-tiba blank.", type: "Guardian", score: 3 },
       { text: "Menyusun ulang flow presentasi agar dia mendapat giliran setelah melihat contoh dari yang lain dulu, biar lebih siap secara teknis.", type: "Rationalist", score: 4 },
-      { text: "Membuat stiker meme lucu dan kirimkan ke dia, agar suasana lebih santai", type: "Artisan", score: 2 },
-      { text: "Memastikan dia tahu dia tidak sendiri dan kita semua ada di sini untuk membantunya.", type: "Idealist", score: 1 },
+      { text: "Membuat stiker meme lucu dan kirimkan ke dia, \nagar suasana lebih santai", type: "Artisan", score: 2 },
+      { text: "Memastikan dia tahu dia tidak sendiri dan kita \nsemua ada di sini untuk membantunya.", type: "Idealist", score: 1 },
     ],
   },
   {
@@ -94,7 +94,7 @@ const questions = [
   {
     question: "\"Sudah jam berapa ini? OH GAWAT , SUDAH PUKUL 1 SIANG!\" jam istirahat berjalan begitu saja dan bentar lagi mulai memasuki mata kuliah selanjutnya, tapi... kamu belum makan apa-apa. Makanan apa yang akan kamu pilih?",
     image: "/gif/sembilan.gif",
-    imgClass: "w-[45vw] max-w-[300px] md:w-[150px]",
+    imgClass: "w-[45vw] max-w-[300px] md:w-[140px]",
     options: [
       { text: "Snack bar karena praktis, bisa dimakan sambil jalan ke kelas", type: "Rationalist", score: 1 },
       { text: "Beli gorengan satu kresek, sekalian buat dibagi ke teman-teman yang lain", type: "Guardian", score: 3 },
@@ -230,11 +230,9 @@ const QuizPage = () => {
   const progress = (answeredQuestions / questions.length) * 100;
 
   return (
-    <div
-      className="h-screen flex flex-col bg-cover bg-center bg-[url('/images/bgwarna.png')] md:bg-[url('/images/bgwarnadesktop.png')]"
-    >
+    <div className="min-h-screen h-screen w-full overflow-y-auto flex flex-col bg-cover bg-center bg-[url('/images/bgrealmobile.png')] md:bg-[url('/images/bgrealdesktop.png')]">
       {/* Progress Bar */}
-      <div className="h-[4vh] flex items-center px-4 pt-2">
+      <div className="h-[4vh] flex items-center px-4 pt-2 mb-6">
         <div className="w-full max-w-xl mx-auto relative">
           <div className="bg-white/50 rounded-full h-3">
             <div
@@ -246,16 +244,16 @@ const QuizPage = () => {
       </div>
 
       {/* Pertanyaan */}
-      <div className="flex items-center justify-center max-h-[16vh] min-h-[10vh] px-4">
-        <span className="font-oddval text-[#3325bc] text-2xl md:text-3xl font-bold mr-2">Q{current + 1}</span>
-        <p className="font-host text-[#3325bc] text-base md:text-lg font-bold overflow-auto">
+      <div className="flex items-center justify-center max-h-[16vh] min-h-[10vh] px-4 mb-4">
+        <p className="font-host text-[#3325bc] text-base md:text-lg font-bold overflow-auto max-w-xl text-center mx-auto">
+          <span className="font-oddval text-[#3325bc] text-2xl md:text-xl font-bold mr-2">Q{current + 1}</span>
           {questions[current].question}
         </p>
       </div>
 
       {/* Gambar GIF */}
       {questions[current].image && (
-        <div className="flex justify-center items-center mt-8 md:mt-8" style={{height: '20vh'}}>
+        <div className="flex justify-center items-center mt-8 md:mt-8 mb-12" style={{height: '20vh'}}>
           <img
             src={questions[current].image}
             alt="Question Illustration"
@@ -265,7 +263,7 @@ const QuizPage = () => {
       )}
 
       {/* Pilihan Jawaban */}
-      <div className="flex-1 flex flex-col justify-center gap-2 px-2 overflow-y-auto">
+      <div className="flex-1 flex flex-col justify-center gap-2 px-2">
         {questions[current].options.map((opt, idx) => (
           <Button
             key={idx}
@@ -279,13 +277,13 @@ const QuizPage = () => {
       </div>
 
       {/* Navigasi */}
-      <div className="h-[7vh] flex items-center justify-between w-full max-w-xl mx-auto px-4 pb-2">
-        <button onClick={handleBack} disabled={current === 0} className="quiz-nav-button disabled:opacity-50">
+      <div className="h-[7vh] w-full max-w-xl mx-auto px-4 pb-2 relative flex items-center justify-center mt-16">
+        <button onClick={handleBack} disabled={current === 0} className="quiz-nav-button disabled:opacity-50 absolute left-0">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </button>
-        <button onClick={handleNext} disabled={isNavigating || current >= answeredQuestions} className="quiz-nav-button disabled:opacity-50">
+        <button onClick={handleNext} disabled={isNavigating || current >= answeredQuestions} className="quiz-nav-button disabled:opacity-50 absolute right-0">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="3" stroke="currentColor" className="w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>

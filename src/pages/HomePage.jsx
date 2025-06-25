@@ -7,7 +7,7 @@ const HomePage = () => {
 
   return (
     <div
-      className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center p-10 bg-cover bg-center pb-50 md:pb-50 bg-[url('/images/bgwarna.png')] md:bg-[url('/images/bgwarnadesktop.png')]"
+      className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center p-10 bg-cover bg-center pb-50 md:pb-50 bg-[url('/images/bgrealmobile.png')] md:bg-[url('/images/bgrealdesktop.png')]"
     >
       <img src="/images/LARASRUPAA-01.png" alt="Laras Rupa" className="w-[70vw] md:w-[35vh] max-w-2xl h-[50vh] md:h-[50vh] -mt-40 object-contain rounded-lg mb-4 drop-shadow-2xl" />
 

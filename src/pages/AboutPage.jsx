@@ -9,7 +9,7 @@ const AboutPage = () => {
 
   return (
     <div
-      className="h-[100vh] flex flex-col items-center justify-center text-center bg-cover bg-center bg-[url('/images/bgwarna.png')] md:bg-[url('/images/bgwarnadesktop.png')] overflow-visible"
+      className="h-[100vh] flex flex-col items-center justify-center text-center bg-cover bg-center bg-[url('/images/bgrealmobile.png')] md:bg-[url('/images/bgrealdesktop.png')] overflow-visible"
       style={{ minHeight: "100vh" }}
     >
       <h1 className="font-oddval text-[#3325bc] font-bold text-[4vw] md:text-xl pt-[4vh]">
